@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LazyFlow AI - Slow & Steady</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero">
+    <div class="logo">🦥</div>
+    <p class="eyebrow">SLOW & STEADY PRODUCTIVITY</p>
+    <h1>Let the sloth do the work.</h1>
+    <p class="subtitle">
+      A calmer way to handle the little tasks you keep putting off.
+    </p>
+    <div class="status">
+      <span class="dot"></span>
+      <span id="connectionStatus">Demo mode</span>
+    </div>
+  </header>
+
+  <main class="layout">
+
+    <section class="panel">
+      <p class="eyebrow">YOUR TASK</p>
+      <h2>What can I make easier?</h2>
+
+      <label for="taskInput">Tell LazyFlow what you need</label>
+      <textarea id="taskInput" rows="5"
+        placeholder="Example: Make a to-do list, write a reminder, or plan a relaxing evening..."></textarea>
+
+      <div class="quick-prompts">
+        <button class="chip" data-prompt="Make a simple to-do list for my day.">
+          Make a to-do list
+        </button>
+        <button class="chip" data-prompt="Write a polite reminder to my teammate.">
+          Write a reminder
+        </button>
+        <button class="chip" data-prompt="Suggest a relaxing evening plan.">
+          Plan a slow evening
+        </button>
+      </div>
+
+      <label for="modelName">Local AI model name</label>
+      <input id="modelName" type="text" value="llama3.2">
+
+      <button id="generateBtn" class="primary-btn">
+        ✨ Make it easier
+      </button>
+
+      <p class="hint">
+        Try demo mode first. Connect Ollama for real local AI.
+      </p>
+    </section>
+
+    <section class="panel result-panel" aria-live="polite">
+      <p class="eyebrow">YOUR HELPFUL SHORTCUT</p>
+      <h2 id="resultHeading">A little less effort.</h2>
+
+      <div id="emptyState" class="empty-state">
+        <div class="cloud">☁️</div>
+        <p>Your result will appear here.</p>
+        <span>One small task at a time. No rush.</span>
+      </div>
+
+      <div id="loading" class="hidden">
+        🦥 The sloth is thinking...
+      </div>
+
+      <pre id="resultText" class="result-text hidden"></pre>
+
+      <div class="result-actions">
+        <button id="copyBtn" class="secondary-btn" disabled>
+          Copy result
+        </button>
+        <button id="clearBtn" class="text-btn">Clear</button>
+      </div>
+
+      <p id="modeNote" class="hint">
+        Your text stays in this page unless you send it to your local model.
+      </p>
+    </section>
+
+  </main>
+
+  <section class="features">
+    <article>
+      <span>🔒</span>
+      <h3>Your privacy</h3>
+      <p>Use a local model to process requests on your computer.</p>
+    </article>
+
+    <article>
+      <span>🌱</span>
+      <h3>Open AI</h3>
+      <p>Choose a compatible model and change it whenever you want.</p>
+    </article>
+
+    <article>
+      <span>🫧</span>
+      <h3>Less busywork</h3>
+      <p>Get drafts, small plans, and helpful suggestions.</p>
+    </article>
+  </section>
+
+  <footer>
+    🦥 Slow down. Let AI handle the first draft. ✨
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
